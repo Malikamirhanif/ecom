@@ -24,7 +24,7 @@ const Header = () => {
               <div className='invisible group-hover:visible duration-300 absolute mt-6 '>
                 {
                  items.isDropDown? items.dropDownItem?.map((items,index)=>
-                  <ul>
+                  <ul key={index}>
                     <li><Link href={items.href}>{items.label}</Link></li>
                   </ul>
                   ):""
@@ -62,7 +62,7 @@ const Header = () => {
               <div className='invisible group-hover:visible   duration-300  absolute mt-6 '>
                 {
                  items.isDropDown? items.dropDownItem?.map((items,index)=>
-                  <ul className=''>
+                  <ul key={index}>
                     <li><Link href={items.href}>{items.label}</Link></li>
                   </ul>
                   ):""
