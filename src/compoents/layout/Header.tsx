@@ -18,8 +18,8 @@ const Header = () => {
          <div className='relative  lg:flex gap-x-1 lg:gap-x-6 '>
           {
             navBarArray.map((items,index)=>(
-              <ul>
-                <li className='flex group'><Link href={items.href}>{items.label}</Link>
+              <ul key={index}>
+                <li  className='flex group'><Link href={items.href}>{items.label}</Link>
               {items.isDropDown?<ChevronDown className='group-hover:rotate-180 duration-300'/>:"" }
               <div className='invisible group-hover:visible duration-300 absolute mt-6 '>
                 {
@@ -56,7 +56,7 @@ const Header = () => {
                         <div className=' lg:flex gap-x-1 lg:gap-x-6 '>
           {
             navBarArray.map((items,index)=>(
-              <ul>
+              <ul key={index}>
                 <li className='flex group'><Link href={items.href}>{items.label}</Link>
               {items.isDropDown?<ChevronDown className='group-hover:rotate-180  duration-300'/>:"" }
               <div className='invisible group-hover:visible   duration-300  absolute mt-6 '>
