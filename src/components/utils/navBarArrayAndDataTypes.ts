@@ -1,4 +1,4 @@
-import { navItems } from '@/components/utils/navBarArrayAndDataTypes';
+
 
 import React from 'react'
 export interface navItems{

@@ -36,9 +36,7 @@ const Hero = () => {
             <div className='rounded-full bg-pink-100'>
             <Image src={header} alt='' height={450} width={400}></Image>
             </div>
-          
-       </div>
-       <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid velit possimus itaque sed minima nesciunt, perferendis incidunt voluptates magni doloribus excepturi veritatis unde architecto reprehenderit optio at vel ea? Perferendis.</p></div>
+      </div>
     </section>
   )
 }
