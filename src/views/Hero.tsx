@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {ShoppingCart} from 'lucide-react'
 import Image from 'next/image'
-import header from '/public/Header.webp'
+import header from '/public/header.webp'
 import f1 from '/public/Featured1.webp'
 import f2 from '/public/Featured2.webp'
 import f3 from '/public/Featured3.webp'
