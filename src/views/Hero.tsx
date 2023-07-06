@@ -38,6 +38,7 @@ const Hero = () => {
             </div>
           
        </div>
+       <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid velit possimus itaque sed minima nesciunt, perferendis incidunt voluptates magni doloribus excepturi veritatis unde architecto reprehenderit optio at vel ea? Perferendis.</p></div>
     </section>
   )
 }
