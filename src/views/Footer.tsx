@@ -3,7 +3,7 @@ import Image from 'next/image'
 import L1 from '/public/Logo.webp'
 import {Twitter,Instagram,Facebook, Copyright} from 'lucide-react'
 import Link from 'next/link'
-import Bottom from './Bottom'
+//import Bottom from './Bottom'
 
 const Footer = () => {
   return (
