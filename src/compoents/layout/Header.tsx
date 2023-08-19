@@ -12,7 +12,7 @@ const Header = () => {
       const [isNav,setisNav]=useState<boolean>(true)
   return (
 
-    <div className='sticky top-0 bg-white flex justify-between px-14 py-5 lg:items-center gap-x-8'>
+    <div className='sticky top-0 backdrop-blur-lg bg-bgcolor flex justify-between px-14 py-5 lg:items-center gap-x-8'>
         <div className='flex-shrink-0 '><Image src={logo} alt='Logo'></Image></div>
        <div className='hidden lg:flex items-center flex-shrink-0 gap-x-20 xl:gap-x-36'>
          <div className='relative  lg:flex gap-x-1 lg:gap-x-6 '>

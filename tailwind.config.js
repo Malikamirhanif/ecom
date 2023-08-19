@@ -15,6 +15,11 @@ content: [
     },
     extend: {
       colors: {
+        bgcolor:'#ffffff',
+        cat1:'#D6D6D8',
+        cat2:'#212121',
+        cat3:'#EFE1C7',
+        cat4:'#D7D7D9',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

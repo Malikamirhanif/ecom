@@ -22,8 +22,8 @@ export const navBarArray:Array<navItems>=[
           isDropDown:false,
         },
         {
-          label: "Shirts",
-          href: "female/shirts",
+          label: "T-Shirts",
+          href: "female/t-shirts",
           isDropDown:false,
         },
         {
@@ -36,39 +36,33 @@ export const navBarArray:Array<navItems>=[
           href: "female/jacket",
           isDropDown:false,
         },  
+        {
+          label: "Sweaters",
+          href: "female/sweater",
+          isDropDown:false,
+        }
      ]
    },
    {
     label:"Male",
-    href:"/female",
+    href:"/male",
     isDropDown:true,
     dropDownItem:[
-      
       {
-        label: "Dresses",
-        href: "female/dresses",
-        isDropDown:false,
-      },
-      {
-        label: "Shirts",
-        href: "female/shirts",
-        isDropDown:false,
-      },
-      {
-        label: "Pents",
-        href: "female/pents",
+        label: "Sweaters",
+        href: "male/sweater",
         isDropDown:false,
       },
       {
         label: "Jackets",
-        href: "female/jacket",
+        href: "male/jacket",
         isDropDown:false,
       },  
    ]
   },
   {
     label:"Kids",
-    href:"/female",
+    href:"/kids",
     isDropDown:false,
   },
   {
