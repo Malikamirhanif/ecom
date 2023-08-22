@@ -18,8 +18,8 @@ import { NextResponse } from 'next/server'
 
 export default async function Home() {
 
-  let response=await fetchProducts();
-  console.log({"response":response});
+  // let response=await fetchProducts();
+  // console.log({"response":response});
   return (
     <main>
       {/* <Hero/>
