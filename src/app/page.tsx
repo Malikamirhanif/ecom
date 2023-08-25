@@ -4,6 +4,8 @@ import Promotions from '@/views/Promotions'
 import NewsLetter from '@/views/NewsLetter'
 import BASE_PATH_URL from '@/compoents/shared/Basepath'
 import { NextResponse } from 'next/server'
+import ProductCarousel from '@/views/ProductCarousel'
+import { Response } from '@/components/utils/SanityProductsTypes'
 
  async function fetchProducts()
  {
@@ -18,14 +20,16 @@ import { NextResponse } from 'next/server'
 
 export default async function Home() {
 
-  let response=await fetchProducts();
-  console.log({"response":response});
+  let res:Response=await fetchProducts();
+
   return (
     <main>
       {/* <Hero/>
       <Promotions/>
       <Jewellery/>
       <NewsLetter/> */}
+      <ProductCarousel productData={res}/>
+
     </main>
   )
 }
