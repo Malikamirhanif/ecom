@@ -8,9 +8,7 @@ const ProductCarousel:FC<{res:Array<oneProductType>} > = ({res}) => {
     <div className='flex gap-5'> 
        {
         res?.map((item:oneProductType,index:number,)=>(
-          <div key={index}>
-            <Cards singleProduct={item}/>
-          </div>
+          <Cards singleProduct={item}/>
 
         ))
        }
