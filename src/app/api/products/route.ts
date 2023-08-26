@@ -7,8 +7,8 @@ export async function GET() {
         // return NextResponse.json({"message":"hi"})
 
        let response=await client.fetch('*[_type=="products"]');
-       console.log(response);
-       return NextResponse.json({response});
+    //    console.log({response});
+       return NextResponse.json(response);
 
     } catch (error) {
         console.log("Error",error)

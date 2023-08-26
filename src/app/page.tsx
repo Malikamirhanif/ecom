@@ -5,11 +5,14 @@ import NewsLetter from '@/views/NewsLetter'
 import BASE_PATH_URL from '@/compoents/shared/Basepath'
 import { NextResponse } from 'next/server'
 import ProductCarousel from '@/views/ProductCarousel'
-import { Response } from '@/components/utils/SanityProductsTypes'
+import {oneProductType} from '@/components/utils/SanityProductsTypes'
+import { Root } from 'postcss'
 
  async function fetchProducts()
  {
-  let res=await fetch(`${BASE_PATH_URL}/api/products`);
+  let url=`${BASE_PATH_URL}/api/products`;
+  let res=await fetch(url,{cache:"no-store",});
+  // console.log(res);
   if(!res.ok)
   {
     throw new Error('Failed to fetch');
@@ -20,7 +23,9 @@ import { Response } from '@/components/utils/SanityProductsTypes'
 
 export default async function Home() {
 
-  let res:Response=await fetchProducts();
+  let resp:Array<oneProductType>=await fetchProducts();
+ 
+// console.log({resp});
 
   return (
     <main>
@@ -28,7 +33,8 @@ export default async function Home() {
       <Promotions/>
       <Jewellery/>
       <NewsLetter/> */}
-      <ProductCarousel productData={res}/>
+      <ProductCarousel res={resp}/>
+      
 
     </main>
   )
