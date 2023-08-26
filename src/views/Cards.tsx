@@ -1,32 +1,43 @@
-import Image from 'next/image'
-import imageUrlBuilder from '@sanity/image-url'
 import React, { FC } from 'react'
-import { oneProductType } from '@/components/utils/SanityProductsTypes'
-import { client } from './../../sanity/lib/client'
-import Link from 'next/link';
+import Link from 'next/link'
+import Image from 'next/image'
+import {oneProductType} from '@/components/utils/SanityProductsTypes'
+import imageUrlBuilder from '@sanity/image-url'
+import { client } from '../../sanity/lib/client';
 
 const builder = imageUrlBuilder(client);
-
-function urlFor(source: any) {
-    return builder.image(source)
+function urlFor(source:any) {
+  return builder.image(source)
 }
 
+const cards:FC<{singleProduct:oneProductType,}> = (singleProduct) => {
+  // console.log(singleProduct.resp.slug.current)
+  // console.log(singleProduct.singleProduct.image[0]);
+  // console.log(singleProduct.singleProduct);
+//  console.log(singleProduct.singleProduct.name);
+  // console.log(urlFor(singleProduct.singleProduct.image[0]).width(500).url())
+  return (
+    <div>
+        {
+         
+         <Link href={singleProduct.singleProduct.slug.current}>
+           <div> 
+            <div className='h-60 w-60'>
+              <Image width={300} height={300} src={urlFor(singleProduct.singleProduct.image[0]).width(500).height(500).url()} alt="del"/>
+            </div>
+            <div>${singleProduct.singleProduct.price}</div>        
+              <div>{singleProduct.singleProduct.name}</div>
+              <div>{singleProduct.singleProduct.quantity}</div>
 
-const Card: FC<{ singleProduct: oneProductType }> = ({ singleProduct}) => {
-    return (
-        <div className='max-w-sm min-w-[24rem] space-y-3 select-none hover:scale-110 duration-300'>
-            <div className='relative w-full'>
-                <div className='absolute inset-0 z-10' />
-                <Image width={1000} height={1000} src={urlFor(singleProduct.image[0]).width(1000).height(1000).url()} alt={singleProduct.image[0].alt} />
-            </div>
-            <div className='space-y-1 text-gray-600 font-semibold text-lg select-none'>
-                <Link href={`/catalog/${singleProduct.slug.current}`}>
-                    <h6>{singleProduct.name}</h6>
-                    <p>${singleProduct.price}</p>
-                </Link>
-            </div>
-        </div>
-    )
+          </div>
+         </Link>
+          
+         
+          
+
+        }
+    </div>
+  )
 }
 
-export default Card
+export default cards
