@@ -27,7 +27,7 @@ const cards:FC<{singleProduct:oneProductType,}> = (singleProduct) => {
             </div>
             <div>${singleProduct.singleProduct.price}</div>        
               <div>{singleProduct.singleProduct.name}</div>
-              <div>{singleProduct.singleProduct.quantity}</div>
+
 
           </div>
          </Link>
