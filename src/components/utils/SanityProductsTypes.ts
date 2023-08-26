@@ -7,6 +7,10 @@ export interface assetImageType {
   _type: string,
   _ref: string,
 };
+export interface Category1 {
+  _ref: string,
+  _type: string,
+};
 export interface imagesType {
   asset: assetImageType,
   _type: string,
@@ -29,6 +33,7 @@ export interface oneProductType {
   productTypes: Array<string>,
   sizes: Array<string>,
   price: number,
+  Category:Category1,
 }
 
 export interface responseType {
