@@ -10,14 +10,14 @@ function urlFor(source:any) {
   return builder.image(source)
 }
 
-const cards:FC<{singleProduct:oneProductType}> = (singleProduct) => {
+const cards:FC<{singleProduct:oneProductType,index:number}> = (singleProduct,index) => {
   // console.log(singleProduct.resp.slug.current)
   // console.log(singleProduct.singleProduct.image[0]);
   // console.log(singleProduct.singleProduct);
 //  console.log(singleProduct.singleProduct.name);
   // console.log(urlFor(singleProduct.singleProduct.image[0]).width(500).url())
   return (
-    <div>
+    <div key={index}>
         {
          
          <Link href={singleProduct.singleProduct.slug.current}>
