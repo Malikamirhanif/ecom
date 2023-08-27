@@ -20,7 +20,7 @@ const Allcards:FC<{proDataSingle:oneProductType}> = ({proDataSingle}) => {
          
           <div>
          <Link href={proDataSingle.slug.current}  >
-         <div>
+         <div className='h-80 w-96 '>
             <Image width={300} height={300} src={urlFor(proDataSingle.image[0]).width(500).height(500).url()} alt='del' />
           </div>
           <div>${proDataSingle.name}</div>

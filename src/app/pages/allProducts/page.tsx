@@ -6,7 +6,7 @@ export default async function GiveAddress() {
   let proData:Array<oneProductType>=await fetchProducts();
   // console.log(proData[0])
     return (
-      <div>
+      <div className="flex flex-wrap justify-between">
          { 
         
           proData.length && proData?.map((item:oneProductType,index:number)=>(         
