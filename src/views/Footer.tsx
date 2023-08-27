@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <div className='flex flex-col md:flex-row items-start gap-10  text-gray-800 mb-16'>
+    <div className='flex flex-col md:flex-row items-start gap-10 mt-20 text-gray-800 mb-16'>
         {/* First Div */}
         <div className='basis-1/4 '>
           <div>

@@ -8,7 +8,7 @@ import ProductCarousel from '@/views/ProductCarousel'
 import {oneProductType} from '@/components/utils/SanityProductsTypes'
 import { Root } from 'postcss'
 
- async function fetchProducts()
+ export  async function fetchProducts()
  {
   let url=`${BASE_PATH_URL}/api/products`;
   let res=await fetch(url,{cache:"no-store",});

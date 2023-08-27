@@ -11,26 +11,34 @@ function urlFor(source:any) {
 }
 
 const cards:FC<{singleProduct:oneProductType,}> = (singleProduct) => {
-  // console.log(singleProduct.resp.slug.current)
+  // console.log(singleProduct)
+  // console.log(singleProduct.singleProduct.slug.current)
   // console.log(singleProduct.singleProduct.image[0]);
   // console.log(singleProduct.singleProduct);
 //  console.log(singleProduct.singleProduct.name);
   // console.log(urlFor(singleProduct.singleProduct.image[0]).width(500).url())
+  
+  
+  
+  
+  
   return (
     <div>
         {
          
-         <Link href={singleProduct.singleProduct.slug.current}>
-           <div> 
-            <div className='h-60 w-60'>
+         <div className='max-w-sm min-w-[24rem] hover:scale-110 select-none'>
+          <Link href={singleProduct.singleProduct.slug.current}>
+           <div className=''> 
+            <div className=''>
               <Image width={300} height={300} src={urlFor(singleProduct.singleProduct.image[0]).width(500).height(500).url()} alt="del"/>
             </div>
             <div>${singleProduct.singleProduct.price}</div>        
-              <div>{singleProduct.singleProduct.name}</div>
+              <div>${singleProduct.singleProduct.name}</div>
 
 
           </div>
          </Link>
+         </div>
           
          
           

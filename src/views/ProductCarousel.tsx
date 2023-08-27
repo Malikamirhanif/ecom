@@ -6,10 +6,8 @@ const ProductCarousel:FC<{res:Array<oneProductType>} > = ({res}) => {
 // console.log("Length is "+res.length)
 
   return (
-    <div className='flex gap-5'> 
+    <div className='flex gap-x-7'> 
        {
-        
-        
        res.length && res?.map((item:oneProductType,index:number)=>(
           <Cards key={index} singleProduct={item}/>
         ))
