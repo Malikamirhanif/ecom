@@ -3,10 +3,10 @@ import Hero from '@/views/Hero'
 import Promotions from '@/views/Promotions'
 import NewsLetter from '@/views/NewsLetter'
 // import BASE_PATH_URL from '@/compoents/shared/Basepath'
-import { NextResponse } from 'next/server'
-import ProductCarousel from '@/views/ProductCarousel'
-import {oneProductType} from '@/components/utils/SanityProductsTypes'
-import { Root } from 'postcss'
+// import { NextResponse } from 'next/server'
+// import ProductCarousel from '@/views/ProductCarousel'
+// import {oneProductType} from '@/components/utils/SanityProductsTypes'
+// import { Root } from 'postcss'
 
 //  export  async function fetchProducts()
 //  {
