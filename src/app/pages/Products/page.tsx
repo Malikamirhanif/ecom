@@ -4,8 +4,8 @@ import ProductCarousel from '@/views/ProductCarousel';
 
 import React from 'react'
 
- async function fetching(){
-    let url=`${BASE_PATH_URL}/api/products`;
+export async function fetching(){
+    let url=`${BASE_PATH_URL}/api/products?st=0&ed=3`;
     let res=await fetch(url,{cache:"no-store",});
     // console.log(res.json())
     if (!res.ok)

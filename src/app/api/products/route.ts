@@ -5,26 +5,26 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(request:NextRequest) {
     try {
          let url=request.nextUrl.searchParams;
-
+        //  console.log({url});
         
         // return NextResponse.json({"message":"hi"})
 
        let response=await client.fetch('*[_type=="products"]');
-    //    let allData=[...response]
-    //    if(url.has("st")&&url.has("ed"))
-    //    {
-    //     if (allData[Number(url.get("st"))]){
-    //         let productArray:Array<oneProductType>=allData.slice(Number(url.get("st")),Number(url.get("ed")))
-    //         return NextResponse.json(productArray)
-    //     }
-    //     else
-    //     {
-    //      return NextResponse.json({productArray:"Not Found"})
-    //     }
-    //    }
+       let allData=[...response]
+       if(url.has("st")&&url.has("ed"))
+       {
+        if (allData[Number(url.get("st"))]){
+            let productArray:Array<oneProductType>=allData.slice(Number(url.get("st")),Number(url.get("ed")))
+            return NextResponse.json(productArray)
+        }
+        else
+        {
+         return NextResponse.json({productArray:"Not Found"})
+        }
+       }
 
     //    console.log({allData})
-     return NextResponse.json(response);
+     return NextResponse.json(allData);
 
     } catch (error) {
         console.log("Error",error)
