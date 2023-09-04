@@ -3,11 +3,15 @@ import { client } from "../../../../sanity/lib/client";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request:NextRequest) {
-    let response=await client.fetch('*[_type=="products"]');
-           let url=await request.nextUrl.searchParams;
-            
+    try {
+         let url=request.nextUrl.searchParams;
+
+        
+        // return NextResponse.json({"message":"hi"})
+
+       let response=await client.fetch('*[_type=="products"]');
        let allData=[...response]
-       if(url.has("st")&&url.has("ed"))
+       if(url.has("st")||url.has("ed"))
        {
         if (allData[Number(url.get("st"))]){
             let productArray:Array<oneProductType>=allData.slice(Number(url.get("st")),Number(url.get("ed")))
@@ -17,20 +21,13 @@ export async function GET(request:NextRequest) {
         {
          return NextResponse.json({productArray:"Not Found"})
         }
-    // try {
-  
-    //     //  console.log({url});
-        
-    //     // return NextResponse.json({"message":"hi"})
-
-   
-    //    }
+       }
 
     //    console.log({allData})
-     return NextResponse.json(response);
+    else return NextResponse.json(allData);
 
-    // } catch (error) {
-    //     console.log("Error",error)
-    // }   
+    } catch (error) {
+        console.log("Error",error)
+    }   
 
 }
