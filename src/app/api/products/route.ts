@@ -11,7 +11,7 @@ export async function GET(request:NextRequest) {
 
        let response=await client.fetch('*[_type=="products"]');
        let allData=[...response]
-       if(url.has("st")||url.has("ed"))
+       if(url.has("st")&& url.has("ed"))
        {
         if (allData[Number(url.get("st"))]){
             let productArray:Array<oneProductType>=allData.slice(Number(url.get("st")),Number(url.get("ed")))
