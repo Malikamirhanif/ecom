@@ -4,8 +4,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request:NextRequest) {
     let response=await client.fetch('*[_type=="products"]');
+           let url=await request.nextUrl.searchParams;
     // try {
-    //      let url=request.nextUrl.searchParams;
+  
     //     //  console.log({url});
         
     //     // return NextResponse.json({"message":"hi"})
