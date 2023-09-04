@@ -8,22 +8,22 @@ import ProductCarousel from '@/views/ProductCarousel'
 import {oneProductType} from '@/components/utils/SanityProductsTypes'
 import { Root } from 'postcss'
 
- export  async function fetchProducts()
- {
-  let url=`${BASE_PATH_URL}/api/products`;
-  let res=await fetch(url,{cache:"no-store",});
-  // console.log(res.json);
-  if(!res.ok)
-  {
-    throw new Error('Failed to fetch');
-  }
-  return res.json();
-  // return NextResponse.json({message:"hi"})
-}
+//  export  async function fetchProducts()
+//  {
+//   let url=`${BASE_PATH_URL}/api/products`;
+//   let res=await fetch(url,{cache:"no-store",});
+//   // console.log(res.json);
+//   if(!res.ok)
+//   {
+//     throw new Error('Failed to fetch');
+//   }
+//   return res.json();
+//   // return NextResponse.json({message:"hi"})
+// }
 
 export default async function Home() {
 
-  let resp:Array<oneProductType>=await fetchProducts();
+  // let resp:Array<oneProductType>=await fetchProducts();
  
 // console.log(resp);
 
@@ -33,7 +33,7 @@ export default async function Home() {
       <Promotions/>
       <Jewellery/>
       <NewsLetter/>
-      <ProductCarousel res={resp}/>
+      {/* <ProductCarousel res={resp}/> */}
     </main>
   )
 }
