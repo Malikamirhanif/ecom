@@ -23,7 +23,7 @@ import { Root } from 'postcss'
 
 export default async function Home() {
 
-  let resp:Array<oneProductType>=await fetchProducts();
+  // let resp:Array<oneProductType>=await fetchProducts();
  
 // console.log(resp);
 
