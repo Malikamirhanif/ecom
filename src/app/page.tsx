@@ -12,7 +12,7 @@ import { Root } from 'postcss'
  {
   let url=`${BASE_PATH_URL}/api/products`;
   let res=await fetch(url,{cache:"no-store",});
-  // console.log(res);
+  // console.log(res.json);
   if(!res.ok)
   {
     throw new Error('Failed to fetch');
@@ -25,7 +25,7 @@ export default async function Home() {
 
   let resp:Array<oneProductType>=await fetchProducts();
  
-// console.log({resp});
+// console.log(resp);
 
   return (
     <main>
@@ -33,7 +33,7 @@ export default async function Home() {
       <Promotions/>
       <Jewellery/>
       <NewsLetter/>
-      <ProductCarousel res={resp}/>
+      {/* <ProductCarousel res={resp}/> */}
     </main>
   )
 }
